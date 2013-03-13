@@ -1,0 +1,37 @@
+[user]
+	name = Stanislav Bitsko
+	email = Stanislav_Bitsko@epam.com
+[push]
+	default = upstream
+[core]
+	excludesfile = ~/.gitignore
+	editor = 'C:/Program Files (x86)/Vim/vim73/gvim.exe'
+	autocrlf = false
+[diff]
+	tool = kdiff3
+[difftool "kdiff3"]
+	cmd = "kdiff3.exe $LOCAL $REMOTE"
+[difftool "smartsynchronize"]
+	cmd = "smartsynchronize.exe $LOCAL $REMOTE"
+[merge]
+	tool = kdiff3
+[mergetool "kdiff3"]
+	cmd = "kdiff3.exe $BASE $LOCAL $REMOTE -m"
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    gr = grep -I
+    grl = grep -l -I
+    ls = ls-files
+    unstage = reset HEAD --
+    discard = commit --
+    last = log -1 HEAD
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+[mergetool]
+	keepBackup = false
+[github]
+	user = zbstof
+[pull]
+    rebase = true
